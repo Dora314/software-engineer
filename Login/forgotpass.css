@@ -1,0 +1,92 @@
+body {
+  font-family: Arial, sans-serif;
+  background: url(../image/quenmk.jpg);
+  background-size: cover;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.password-reset-form {
+  max-width: 600px;
+  background-color:rgb(255, 255, 255, 0.7);
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 115, 255, 0.8);
+}
+
+.form-heading{
+    font-size: 30px;
+    color: rgb(0, 145, 255);
+}
+
+.password-reset-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  font-size: 20px;
+  color: blue;
+}
+
+.form-input{
+    font-size: 15px;
+}
+
+.form-group input {
+  width: 95%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.button-group {
+  display: flex;
+  justify-content: space-between;
+}
+
+.button-group button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 18px;
+  flex: 1; /* Thêm dòng này để cả hai nút chiếm đều không gian */
+  margin-right: 5px; /* Thêm để tạo khoảng cách nhỏ giữa các nút */
+}
+
+.button-group button:last-child {
+    margin-right: 0; /* Loại bỏ khoảng cách bên phải của nút cuối cùng */
+}
+
+.button-group button:hover {
+  background-color: #ddd;
+  box-shadow: 0px 0px 17px 3px rgb(173, 224, 255);
+  color: black;
+}
+
+.confirm-button {
+    flex: 1;
+    margin-right: 5px;
+    background-color: #4CAF50; /* Màu xanh lá */
+    color: white;
+}
+  
+.cancel-button {
+    flex: 1;
+    margin-right: 0;
+    background-color: #f44336; /* Màu đỏ */
+    color: white;
+}  

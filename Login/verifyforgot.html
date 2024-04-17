@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xác thực - Đổi mật khẩu</title>
+    <link rel="stylesheet" href="verifyforgot.css">
+</head>
+<body>
+    <div class="container">
+        <form id="accountForm">
+            <h2 class = "form-heading">Đổi mật khẩu dành cho Quên mật khẩu</h2>
+            <h3 class= "form-subheading">Vui lòng nhập các thông tin sau đây để xác thực</h3>
+            <div class = "form-input-tk">
+                <label for="username">Tên tài khoản:</label>
+                <input type="text" id="username" name="username" class="form-tentk" placeholder="Nhập tên tài khoản">
+            </div>
+            
+            <div class = "form-role">
+                <label for="role">Vai trò:</label>
+                <select id="role" name="role" required>
+                    <option value="admin">Quản lý</option>
+                    <option value="sales">Sale</option>
+                    <option value="marketing">Marketing</option>
+                    <option value="consultant">Tư vấn</option>
+                </select>
+            </div>
+
+            <div class = "form-input-phone">
+                <label for="phone">Số điện thoại:</label>
+                <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" class = "form-phoneno" required placeholder="Nhập đúng số điện thoại để xác thực">
+            </div>
+            
+            <button type="submit">Xác nhận</button>
+        </form>
+    </div>
+
+    <div id="errorMessage" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>Nhập không đúng</p>
+        </div>
+    </div>
+
+    <script src="verifyforgot.js"></script>
+</body>
+</html>

@@ -1,0 +1,144 @@
+body {
+    font-family: Arial, sans-serif;
+    background: url(../image/quenmk.jpg);
+    background-size: cover;
+
+}
+
+.container {
+    width: 50%;
+    margin: 50px auto;
+    max-width: 600px;
+    background: rgba(255, 255, 255, 0.8);
+    flex-grow: 1;
+    padding: 20px 30px 30px;
+    box-shadow: 0px 0px 17px 15px rgb(173, 224, 255);
+    border-radius: 5px;   
+    
+    margin-top: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.form-heading{
+    font-size: 30px;
+    color:rgb(0, 106, 255);
+    text-align: center;
+    font-weight: bold;
+}
+
+.form-subheading{
+    font-size: 20px;
+    color:rgb(218, 74, 12);
+    text-align: center;
+    font-weight: bold;
+}
+
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 30px;
+}
+
+.form-tentk{
+    font-size: 15px;
+
+}
+
+.form-phoneno{
+    font-size: 15px;
+}
+input[type="text"],
+input[type="tel"],
+
+select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 15px;
+}
+
+
+.form-role {
+    display: flex;
+    height: 7vh; /* Chiều cao của form, có thể sửa đổi theo ý muốn */
+    flex-wrap: wrap;
+}
+
+/* Thiết lập các kiểu cho phần chọn và nhãn */
+.form-role label {
+    margin-top: 10px;
+    margin-bottom: 1px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+
+.form-role select {
+    padding: 8px; /* Tạo khoảng cách giữa viền và văn bản bên trong */
+    border-radius: 4px; /* Bo tròn góc */
+    width: 100%;
+    font-size: 15px;
+    text-align: center;
+}
+
+button {
+    background-color: #0048ff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 60%;
+
+    font-size: 20px;
+    font-weight: bold;
+
+    margin-left: 115px;
+    margin-top: 12px;
+}
+
+button:hover {
+    background-color: #b9b9b9;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 25% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%;
+    text-align: center;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
