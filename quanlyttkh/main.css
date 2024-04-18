@@ -1,46 +1,73 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.table-sortable {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table-sortable th, .table-sortable td {
+    padding: 15px;
+    border: 1px solid #ddd;
+}
+
 .table-sortable th {
-	cursor: pointer;
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
 }
 
-.table-sortable .th-sort-asc::after {
-	content: "\25b4";
+.table-sortable tr:nth-child(even) {
+    background-color: #f2f2f2;
 }
 
-.table-sortable .th-sort-desc::after {
-	content: "\25be";
+/* Button styles */
+.edit-btn, .delete-btn {
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 2px 2px;
+    cursor: pointer;
 }
 
-.table-sortable .th-sort-asc::after,
-.table-sortable .th-sort-desc::after {
-	margin-left: 5px;
-}
-
-.table-sortable .th-sort-asc,
-.table-sortable .th-sort-desc {
-	background: rgba(0, 0, 0, 0.1);
-}
 .edit-btn {
-	background-color: #4CAF50; /* Green */
-	border: none;
-	color: white;
-	padding: 5px 10px;
-	text-align: center;
-	text-decoration: none;
-	display: inline-block;
-	font-size: 16px;
-	margin: 2px 2px;
-	cursor: pointer;
+    background-color: #4CAF50; /* Green */
 }
-/* Add styles for the delete button */
+
 .delete-btn {
-	background-color: #f44336; /* Red */
-	border: none;
-	color: white;
-	padding: 5px 10px;
-	text-align: center;
-	text-decoration: none;
-	display: inline-block;
-	font-size: 16px;
-	margin: 2px 2px;
-	cursor: pointer;
+    background-color: #f44336; /* Red */
+}
+
+/* Form styles */
+#add-row-form {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+#add-row-form input[type="text"] {
+    flex: 1;
+    margin-right: 10px;
+    padding: 10px;
+}
+
+#add-row-form button[type="submit"] {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
 }
