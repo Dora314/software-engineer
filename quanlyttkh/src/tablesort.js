@@ -44,16 +44,25 @@ document.querySelectorAll(".table-sortable th").forEach(headerCell => {
 });
 
 // Add event listeners for editing cells
+// Add event listeners for editing cells
 document.querySelectorAll(".edit-btn").forEach(button => {
     button.addEventListener("click", () => {
         const row = button.parentElement.parentElement;
         const cells = row.querySelectorAll(".editable");
         cells.forEach(cell => {
-            cell.contentEditable = true;
-            cell.style.backgroundColor = "#ddd"; // Highlight editable cells
+            if (cell.isContentEditable) {
+                // If the cell is currently editable, make it non-editable and remove the highlight
+                cell.contentEditable = false;
+                cell.style.backgroundColor = ""; // Remove background color
+            } else {
+                // If the cell is currently non-editable, make it editable and add the highlight
+                cell.contentEditable = true;
+                cell.style.backgroundColor = "#ddd"; // Highlight editable cells
+            }
         });
     });
 });
+
 
 // Add event listeners for deleting rows
 document.querySelectorAll(".delete-btn").forEach(button => {
