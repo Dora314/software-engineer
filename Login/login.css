@@ -8,7 +8,7 @@
 
     .left-col{
         flex: 1;   
-        background: url('../image/Outright Systems.jpg')center/cover no-repeat;
+        background: url('../Login/image/Outright Systems.jpg')center/cover no-repeat;
 }
 
 #wrapper{
@@ -73,8 +73,6 @@
     cursor: pointer;
     font-weight: bold;
     border-radius: 5px;
-
-
 }
 
 .login-button:hover{
@@ -89,7 +87,7 @@
     cursor: pointer;
     font-size: 15px;
     margin-top: 20px;
-    margin-left: 580px;
+    margin-left: 570px;
     margin-bottom: 30px;
 }
 
