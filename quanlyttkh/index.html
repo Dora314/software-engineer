@@ -4,40 +4,52 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Easily Sort HTML Tables with CSS and JavaScript</title>
+	<title>Quản lý thông tin khách hàng</title>
 	<link rel="stylesheet" href="main.css">
 </head>
 <body>
+  <h1 class = "heading">Quản lý thông tin khách hàng</h1>
+  <h2 class="subheading">Để tạo mới thông tin khách hàng, vui lòng điền vào các trường dưới đây:</h2>
+
   <form id="add-row-form">
-    <!-- Add this above your table -->
-		<input type="text" id="new-id" placeholder="Id">
-		<input type="text" id="new-name" placeholder="Name">
-    <input type="text" id="new-birthdate" placeholder="Birthdate">
-    <input type="text" id="new-address" placeholder="Address">
-    <input type="text" id="new-phoneNo" placeholder="Phone Number">
-    <input type="text" id="new-email" placeholder="Email">
-    <input type="text" id="new-level" placeholder="Level">
-		<input type="text" id="new-occupation" placeholder="Occupation">
-		<button type="submit">Add</button>
+    <div class="input-row">
+      <div class="input-column">
+        <input type="text" id="new-id" placeholder="ID">
+        <input type="text" id="new-name" placeholder="Name">
+        <input type="text" id="new-birthdate" placeholder="Birthdate">
+        <input type="text" id="new-address" placeholder="Address">
 
+        <input type="text" id="new-phoneNo" placeholder="Phone Number">
+        <input type="text" id="new-email" placeholder="Email">
+        <input type="text" id="new-level" placeholder="Level">
+        <input type="text" id="new-occupation" placeholder="Occupation">
 
+        <button type="submit">Thêm</button>
 
+      </div>
+    </div>
+  </form>
 
-    
-    <input type="text" id="id-search" placeholder="Tìm kiếm ID...">
-	</form>
+  <form id="add-row-form3">
+    <div class="input-row">
+      <div class="input-column">
+        <input type="te1xt" id="id-search" placeholder="Tìm kiếm ID...">
+      </div>
+    </div>
+  </form>
+  
 	<table class="table-sortable">
 		<thead>
 			<tr>
-				<th>Id</th>
-				<th>Name</th>
-        <th>Birthdate</th>
-        <th>Address</th>
-        <th>Phone Number</th>
+				<th>ID</th>
+				<th>Họ-Tên</th>
+        <th>Ngày tháng năm sinh</th>
+        <th>Địa chỉ</th>
+        <th>Số điện thoại</th>
         <th>Email</th>
-        <th>Level</th>
-				<th>Occupation</th>
-        <th>Action</th>
+        <th>Cấp độ</th>
+				<th>Nghề nghiệp</th>
+        <th></th>
 			</tr>
 		</thead>
 		<tbody>
@@ -50,10 +62,30 @@
         <td class="editable">haha@gmail.com</td>
         <td class="editable">ascendant</td>
         <td class="editable">Student</td>
-        <td><button class="edit-btn">Edit</button>
-            <button class="delete-btn">Delete</button> <!-- Delete button -->
+        
+        <td class="action-buttons">
+          <button class="edit-btn">Sửa</button>
+          <button class="delete-btn">Xóa</button> <!-- Delete button -->
         </td>
-      </tbody>      
+      </tr>
+
+      <tr>
+        <td class="editable">007</td>
+        <td class="editable">Bao</td>
+        <td class="editable">10/10/2004</td>
+        <td class="editable">Quan go vap</td>
+        <td class="editable">0123456789</td>
+        <td class="editable">haha@gmail.com</td>
+        <td class="editable">ascendant</td>
+        <td class="editable">Student</td>
+        
+        <td class="action-buttons">
+          <button class="edit-btn">Sửa</button>
+          <button class="delete-btn">Xóa</button> <!-- Delete button -->
+        </td>
+      </tr>
+
+    </tbody>      
 	</table>
 
 	<script src="./src/tablesort.js"></script>

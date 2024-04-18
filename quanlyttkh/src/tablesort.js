@@ -57,7 +57,7 @@ document.querySelectorAll(".edit-btn").forEach(button => {
             } else {
                 // If the cell is currently non-editable, make it editable and add the highlight
                 cell.contentEditable = true;
-                cell.style.backgroundColor = "#ddd"; // Highlight editable cells
+                cell.style.backgroundColor = "#ffe0e0"; // Highlight editable cells
             }
         });
     });
@@ -65,19 +65,19 @@ document.querySelectorAll(".edit-btn").forEach(button => {
 
 
 // Add event listeners for deleting rows
-document.querySelectorAll(".delete-btn").forEach(button => {
-    button.addEventListener("click", (event) => {
-        // Prevent default action of button click
-        event.preventDefault();
+// document.querySelectorAll(".delete-btn").forEach(button => {
+//     button.addEventListener("click", (event) => {
+//         // Prevent default action of button click
+//         event.preventDefault();
 
-        // Show confirmation dialog
-        const confirmed = confirm("Bạn có chắc chắn muốn xóa dòng này không?");
-        if (confirmed) {
-            const row = event.target.parentElement.parentElement;
-            row.parentNode.removeChild(row);
-        }
-    });
-});
+//         // Show confirmation dialog
+//         const confirmed = confirm("Bạn có chắc chắn muốn xóa dòng này không?");
+//         if (confirmed) {
+//             const row = event.target.parentElement.parentElement;
+//             row.parentNode.removeChild(row);
+//         }
+//     });
+// });
 
 // Add event listener for adding new row
 document.getElementById("add-row-form").addEventListener("submit", (event) => {
@@ -135,17 +135,17 @@ document.getElementById("add-row-form").addEventListener("submit", (event) => {
         });
     });
 
-    newRow.querySelector(".delete-btn").addEventListener("click", (event) => {
-        // Prevent default action of button click
-        event.preventDefault();
+    // newRow.querySelector(".delete-btn").addEventListener("click", (event) => {
+    //     // Prevent default action of button click
+    //     event.preventD-efault();
 
-        // Show confirmation dialog
-        const confirmed = confirm("Bạn có chắc chắn muốn xóa dòng này không?");
-        if (confirmed) {
-            const row = event.target.parentElement.parentElement;
-            row.parentNode.removeChild(row);
-        }
-    });
+    //     // Show confirmation dialog
+    //     const confirmed = confirm("Bạn có chắc chắn muốn xóa dòng này không?");
+    //     if (confirmed) {
+    //         const row = event.target.parentElement.parentElement;
+    //         row.parentNode.removeChild(row);
+    //     }
+    // });
 });
 
 // Add event listener for deleting rows within the table body
