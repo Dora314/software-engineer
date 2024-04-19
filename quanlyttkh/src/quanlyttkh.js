@@ -98,11 +98,12 @@ document.getElementById("add-row-form").addEventListener("submit", (event) => {
     const address = document.getElementById("new-address").value;
     const phoneNo = document.getElementById("new-phoneNo").value;
     const email = document.getElementById("new-email").value;
-    const level = document.getElementById("new-level").value;
     const occupation = document.getElementById("new-occupation").value;
+    const level = document.getElementById("new-level").value;
+    const total = document.getElementById("new-total").value;
 
     // Check if any field is empty
-    if (!id || !name || !birthdate || !address || !phoneNo || !email || !level || !occupation) {
+    if (!id || !name || !birthdate || !address || !phoneNo || !email || !level || !total || !occupation) {
         alert("Thông tin không hợp lệ.");
         return;
     }
@@ -115,8 +116,9 @@ document.getElementById("add-row-form").addEventListener("submit", (event) => {
         <td class="editable">${address}</td>
         <td class="editable">${phoneNo}</td>
         <td class="editable">${email}</td>
-        <td class="editable">${level}</td>
         <td class="editable">${occupation}</td>
+        <td class="editable">${level}</td>
+        <td class="editable">${total}</td>
         <td>
             <button class="edit-btn">Edit</button>
             <button class="delete-btn">Delete</button>
