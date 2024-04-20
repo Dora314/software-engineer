@@ -3,11 +3,10 @@ function login() {
     var password = document.getElementById('password').value;
     var role = document.getElementById('role').value;
 
-    // Kiểm tra thông tin đăng nhập
-    if (username === 'admin' && password === 'admin' && role === 'admin') {
-        alert('Đăng nhập thành công với vai trò Quản lý!');
-        window.location.href = "menu/menu.html";
+    // Kiểm tra đăng nhập (giả định đây là dữ liệu hợp lệ)
+    if (username === "admin" && password === "admin" && role === "admin") {
+        window.location.href = '/menu/menu.html'; // Chuyển hướng nếu đăng nhập thành công
     } else {
-        alert('Thông tin đăng nhập không chính xác.');
+        alert('Tên đăng nhập hoặc mật khẩu không đúng, hoặc bạn không có quyền truy cập với vai trò này.');
     }
 }
