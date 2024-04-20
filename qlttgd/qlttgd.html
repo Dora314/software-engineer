@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Quản lý thông tin giao dịch</title>
+	<link rel="stylesheet" href="qlttgd.css">
+</head>
+<body>
+  <h1 class = "heading">Quản lý thông tin giao dịch</h1>
+  <h2 class="subheading">Để tạo mới thông tin giao dịch, vui lòng điền vào các trường dưới đây:</h2>
+
+  <form id="add-row-form">
+    <div class="input-row">
+      <div class="input-column">
+        <input type="text" id="new-transactionID" placeholder="Transaction ID">
+        <input type="text" id="new-transactionDay" placeholder="Transaction Day">
+        <input type="text" id="new-totalPriceTransaction" placeholder="Total Price Transaction">
+        <input type="text" id="new-numberProductCategory" placeholder="Number Product Category">
+        <input type="text" id="new-phoneNo" placeholder="Phone Number">
+        <button type="submit">Thêm</button>
+      </div>
+    </div>
+  </form>
+
+  <form id="add-row-form3">
+    <div class="input-row">
+      <div class="input-column">
+        <input type="te1xt" id="id-search" placeholder="Tìm kiếm ID...">
+      </div>
+    </div>
+  </form>
+  
+	<table class="table-sortable">
+		<thead>
+			<tr>
+				<th>TransactionID</th>
+        <th>Ngày giờ giao dịch</th>
+        <th>Tổng giá trị giao dịch</th>
+        <th>Số mặt hàng</th>
+        <th>Số điện thoại</th>
+        <th></th>
+			</tr>
+		</thead>
+		<tbody>
+      <tr>
+        <td class="editable">5</td>
+        <td class="editable">10/10/2004 10:59:59</td>
+        <td class="editable">100</td>
+        <td class="editable">10</td>
+        <td class="editable">123456789</td>
+        
+        <td class="action-buttons">
+          <button class="delete-btn">Xóa</button> <!-- Delete button -->
+        </td>
+      </tr>
+
+    </tbody>      
+	</table>
+
+	<script src="qlttgd.js"></script>
+</body>
+</html>
