@@ -1,27 +1,33 @@
 body {
     font-family: Arial, sans-serif;
+    background-image: url(../menu/img/1.jpg); /* Thay thế bằng đường dẫn thực tế của file PNG */
+  background-size: cover; /* Đảm bảo hình ảnh bao phủ toàn bộ khu vực */
+  
 }
-
+.center-heading {
+  text-align: center;
+}
 h1 {
-    margin-left:750px ;
+    margin-left:820px ;
     color: rgb(10, 76, 218);
 }
 
 table {
-    margin-left:300px ;
+    margin-left:350px ;
     width: 75%;
     border-collapse: collapse;
     margin-top: 20px;
+    font-size:20px ;
 }
 
 th, td {
-    border: 1px solid #dddddd;
+    border: 2px solid #0f2753;
     text-align: left;
     padding: 8px;
 }
 
 th {
-    background-color: #f2f2f2;
+    background-color: #faf3b1d0;
 }
 
 tr:nth-child(even) {
