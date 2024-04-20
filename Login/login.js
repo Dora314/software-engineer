@@ -5,7 +5,7 @@ function login() {
 
     // Kiểm tra đăng nhập (giả định đây là dữ liệu hợp lệ)
     if (username === "admin" && password === "admin" && role === "admin") {
-        window.location.href = '/menu/menu.html'; // Chuyển hướng nếu đăng nhập thành công
+        window.location.href = '../menu/menu.html'; // Chuyển hướng nếu đăng nhập thành công
     } else {
         alert('Tên đăng nhập hoặc mật khẩu không đúng, hoặc bạn không có quyền truy cập với vai trò này.');
     }
