@@ -101,7 +101,7 @@ document.getElementById("add-row-form").addEventListener("submit", (event) => {
     const totalPriceTransaction = document.getElementById("new-totalPriceTransaction").value;
 
     // Check if any field is empty
-    if (!cusId || !transactionId || !transactionDay || !numberProductCategory || !productQuantity || totalPriceTransaction ) {
+    if (!cusId || !transactionId || !transactionDay || !numberProductCategory || !productQuantity || !totalPriceTransaction ) {
         alert("Thông tin không hợp lệ.");
         return;
     }
