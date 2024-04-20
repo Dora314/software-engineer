@@ -80,25 +80,17 @@ document.querySelectorAll(".edit-btn").forEach(button => {
 // });
 
 // Add event listener for adding new row
+// Add event listener for adding new row
 document.getElementById("add-row-form").addEventListener("submit", (event) => {
     event.preventDefault();
     
-
-    const id = document.getElementById("new-id").value;
-    // Other fields...
-
-    // Check if ID already exists in the table
-    const existingIds = Array.from(document.querySelectorAll(".table-sortable tbody tr td:first-child"), td => td.textContent);
-    if (existingIds.includes(id)) {
-        alert("ID đã tồn tại. Thông tin không hợp lệ.");
-        return;
-    }
-    const cusId = document.getElementById("new-cusId").value;
-    const transactionId = document.getElementById("new-transactionId").value;
-    const transactionDay = document.getElementById("new-transactionDay").value;
-    const numberProductCategory = document.getElementById("new-numberProductCategory").value;
-    const productQuantity = document.getElementById("new-productQuantity").value;
-    const totalPriceTransaction = document.getElementById("new-totalPriceTransaction").value;
+    // Retrieve values from input fields
+    const cusId = document.getElementById("new-cusId").value.trim();
+    const transactionId = document.getElementById("new-transactionID").value.trim();
+    const transactionDay = document.getElementById("new-transactionDay").value.trim();
+    const numberProductCategory = document.getElementById("new-numberProductCategory").value.trim();
+    const productQuantity = document.getElementById("new-productQuantity").value.trim();
+    const totalPriceTransaction = document.getElementById("totalPriceTransaction").value.trim();
 
     // Check if any field is empty
     if (!cusId || !transactionId || !transactionDay || !numberProductCategory || !productQuantity || !totalPriceTransaction ) {
@@ -106,30 +98,42 @@ document.getElementById("add-row-form").addEventListener("submit", (event) => {
         return;
     }
 
+    // Create a new table row
     const newRow = document.createElement('tr');
     newRow.innerHTML = `
-        <td class="editable">${cusId}</td>
-        <td class="editable">${transactionId}</td>
-        <td class="editable">${transactionDay}</td>
-        <td class="editable">${numberProductCategory}</td>
-        <td class="editable">${productQuantity}</td>
-        <td class="editable">${totalPriceTransaction}</td>
-        <td>
-            <button class="edit-btn">Edit</button>
-            <button class="delete-btn">Delete</button>
-        </td>
+    <td class="editable">${cusId}</td>
+    <td class="editable">${transactionId}</td>
+    <td class="editable">${transactionDay}</td>
+    <td class="editable">${numberProductCategory}</td>
+    <td class="editable">${productQuantity}</td>
+    <td class="editable">${totalPriceTransaction}</td>
+    <td class="action-buttons">
+        <button class="edit-btn">Sửa</button>
+        <button class="delete-btn">Xóa</button>
+    </td>
     `;
 
+    // Append the new row to the table body
     document.querySelector(".table-sortable tbody").appendChild(newRow);
 
-    // Add event listeners to the new buttons
+    // Clear input fields after adding the row
+    document.getElementById("add-row-form").reset();
+    
+    // Add event listeners to the new row's buttons
     newRow.querySelector(".edit-btn").addEventListener("click", () => {
-        const row = newRow;
-        const cells = row.querySelectorAll(".editable");
+        const cells = newRow.querySelectorAll(".editable");
         cells.forEach(cell => {
             cell.contentEditable = true;
             cell.style.backgroundColor = "#ddd"; // Highlight editable cells
         });
+    });
+
+    newRow.querySelector(".delete-btn").addEventListener("click", () => {
+        // Show confirmation dialog
+        const confirmed = confirm("Bạn có chắc chắn muốn xóa dòng này không?");
+        if (confirmed) {
+            newRow.remove(); // Remove the row if confirmed
+        }
     });
 
     // newRow.querySelector(".delete-btn").addEventListener("click", (event) => {
