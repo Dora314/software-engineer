@@ -3,17 +3,18 @@ body {
   font-family: 'Helvetica Neue', Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background: #f4f4f4; /* Màu nền cho trang */
+  background-image: url(../menu/img/crm1.jpg); /* Thay thế bằng đường dẫn thực tế của file PNG */
+  background-size: cover; /* Đảm bảo hình ảnh bao phủ toàn bộ khu vực */
 }
 
 /* Thanh sidebar với gradient và bóng đổ */
 .sidebar {
   height: 100%;
-  width: 250px;
+  width: 280px;
   position: fixed;
   top: 0;
   left: 0;
-  background: linear-gradient(to bottom, #008bff, #0062cc);
+  background: linear-gradient(to bottom, #094d85, #44074b);
   box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
   padding-top: 20px;
 }
