@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Nhập đơn hàng</title>
+	<link rel="stylesheet" href="qldh.css">
+</head>
+<body>
+  <h1 class = "heading">Nhập đơn hàng </h1>
+  <h2 class="subheading">Để tạo mới thông tin đơn hàng, vui lòng điền vào các trường dưới đây:</h2>
+  <form id="add-row-form">
+    <div class="input-row">
+      <div class="input-column">
+        <input type="text" id="new-cusId" placeholder="cusId">
+        <input type="text" id="new-transactionID" placeholder="transactionID">
+        <input type="text" id="new-transactionDay" placeholder="transactionDay">
+        <input type="text" id="new-numberProductCategory" placeholder="numberProductCategory">
+        <input type="text" id="new-productQuantity" placeholder="productQuantity">
+        <input type="text" id="totalPriceTransaction" placeholder="totalPriceTransaction">
+        <button type="submit">Thêm</button>
+
+      </div>
+    </div>
+  </form>
+
+  <form id="add-row-form3">
+    <div class="input-row">
+      <div class="input-column">
+        <input type="te1xt" id="id-search" placeholder="Tìm kiếm ID...">
+      </div>
+    </div>
+  </form>
+  
+	<table class="table-sortable">
+		<thead>
+			<tr>
+				<th>ID khách hàng</th>
+				<th>ID giao dịch</th>
+        <th>Ngày giao dịch</th>
+        <th>Mã loại sản phẩm</th>
+        <th>Số lượng</th>
+        <th>Tổng giá trị giao dịch</th>
+        <th></th>
+			</tr>
+		</thead>
+		<tbody>
+      <tr>
+        <td class="editable">005</td>
+        <td class="editable">999</td>
+        <td class="editable">10/10/2004</td>
+        <td class="editable">Cpu</td>
+        <td class="editable">2</td>
+        <td class="editable">400000</td>
+        <td class="action-buttons">
+          <button class="edit-btn">Sửa</button>
+          <button class="delete-btn">Xóa</button> <!-- Delete button -->
+        </td>
+      </tr>
+
+      <tr>
+        <td class="editable">007</td>
+        <td class="editable">674</td>
+        <td class="editable">13/08/2005</td>
+        <td class="editable">Vga</td>
+        <td class="editable">3</td>
+        <td class="editable">600000</td>
+        <td class="action-buttons">
+          <button class="edit-btn">Sửa</button>
+          <button class="delete-btn">Xóa</button> <!-- Delete button -->
+        </td>
+      </tr>
+
+    </tbody>      
+	</table>
+
+	<script src="qldh.js"></script>
+</body>
+</html>
