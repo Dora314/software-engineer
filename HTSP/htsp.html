@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Bảng hiển thị thông tin sản phẩm </title>
+	<link rel="stylesheet" href="htsp.css">
+</head>
+<body>
+  <h1 class = "heading">Bảng hiển thị thông tin sản phẩm </h1>
+  <h2 class="subheading">Để tạo mới thông tin đơn hàng, vui lòng điền vào các trường dưới đây:</h2>
+  <form id="add-row-form">
+    <div class="input-row">
+      <div class="input-column">
+        <input type="text" id="new-productId" placeholder="productId">
+        <input type="text" id="new-productCategory" placeholder="new-productCategory">
+        <input type="text" id="new-productName" placeholder="new-productName">
+        <input type="text" id="new-price" placeholder="new-price">
+        <button type="submit">Thêm</button>
+
+      </div>
+    </div>
+  </form>
+
+  <form Id="add-row-form3">
+    <div class="input-row">
+      <div class="input-column">
+        <input type="te1xt" id="id-search" placeholder="Tìm kiếm ID...">
+      </div>
+    </div>
+  </form>
+  
+	<table class="table-sortable">
+		<thead>
+			<tr>
+				<th>ID sản phẩm</th>
+				<th>Loại sản phẩm</th>
+        <th>Tên sản phẩm</th>
+        <th>Đơn giá</th>
+        <th></th>
+			</tr>
+		</thead>
+		<tbody>
+      <tr>
+        <td class="editable">069</td>
+        <td class="editable">Under wear</td>
+        <td class="editable">boxer</td>
+        <td class="editable">299000</td>
+        <td class="action-buttons">
+          <button class="edit-btn">Sửa</button>
+          <button class="delete-btn">Xóa</button> <!-- Delete button -->
+        </td>
+      </tr>
+
+      <tr>
+        <td class="editable">096</td>
+        <td class="editable">Perfume</td>
+        <td class="editable">YSL La Nuit De L'homme</td>
+        <td class="editable">3000000</td>
+        <td class="action-buttons">
+          <button class="edit-btn">Sửa</button>
+          <button class="delete-btn">Xóa</button> <!-- Delete button -->
+        </td>
+      </tr>
+
+    </tbody>      
+	</table>
+
+	<script src="htsp.js"></script>
+</body>
+</html>

@@ -1,0 +1,122 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.container {
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.table-sortable {
+    width: 80%;
+    border-collapse: collapse;
+    margin-left: 30px;
+    margin-top: 20px;
+}
+
+.table-sortable th, .table-sortable td {
+    padding: 10px 15px;
+    border: 1px solid #000000;
+}
+
+.table-sortable th {
+    background-color: rgb(0, 85, 255, 0.9);
+    color: #fff;
+    cursor: pointer;
+}
+
+.table-sortable tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Button styles */
+.action-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.edit-btn, .delete-btn {
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 2px 2px;
+    cursor: pointer;
+
+}
+
+.edit-btn {
+    background-color: #4CAF50; /* Green */
+}
+
+.delete-btn {
+    background-color: #f44336; /* Red */
+}
+
+/* Form styles */
+.heading{
+    text-align: center;
+    color: rgb(0, 85, 255);
+}
+
+.subheading{
+    margin-left: 30px;
+    font-size: 20px;
+    color: #db770c;
+    font-style: italic;
+}
+
+#add-row-form {
+    display: flex;
+    margin-left: 40px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+
+#add-row-form3 {
+    display: flex;
+    margin-bottom: 10px;
+    margin-left: 20px;
+}
+
+#add-row-form input[type="text"] {
+    flex: 1;
+    padding: 10px 30px;
+    font-size: 18px;
+    text-align: center;
+    border-color: blue;
+    border-radius: 6px;
+    margin-right: 19px;
+}
+
+
+#add-row-form3 input[type="te1xt"] {
+    flex: 1;
+    padding: 10px 15px;
+    font-size: 15px;
+    text-align: center;
+    border-color: rgb(0, 0, 0);
+    border-radius: 6px;
+    border-width: 4px;
+    margin-left: 25px;
+    margin-top: 20px;
+}
+
+#add-row-form button[type="submit"] {
+    padding: 10px 20px;
+    background-color: #0048ff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+}
