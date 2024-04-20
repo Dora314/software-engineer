@@ -1,9 +1,9 @@
 document.addEventListener("DOMContentLoaded", function() {
     // Sample data - replace this with your actual data
     let requestData = [
-        { id: 1, customerId: 101, requestType: "Complaint", description: "Issue with product delivery", status: "waiting" },
-        { id: 2, customerId: 102, requestType: "Inquiry", description: "Product information needed", status: "waiting" },
-        { id: 3, customerId: 103, requestType: "Feedback", description: "Suggestion for improvement", status: "waiting" }
+        { id: 1, customerId: 913722860, requestType: "Complaint", description: "Issue with product delivery", status: "waiting" },
+        { id: 2, customerId: 910229999, requestType: "Inquiry", description: "Product information needed", status: "waiting" },
+        { id: 3, customerId: 910336777, requestType: "Feedback", description: "Suggestion for improvement", status: "waiting" }
     ];
 
     const tableBody = document.querySelector("#requests-table tbody");
