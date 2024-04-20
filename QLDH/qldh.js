@@ -81,6 +81,7 @@ document.querySelectorAll(".edit-btn").forEach(button => {
 
 // Add event listener for adding new row
 // Add event listener for adding new row
+// Add event listener for adding new row
 document.getElementById("add-row-form").addEventListener("submit", (event) => {
     event.preventDefault();
     
@@ -95,6 +96,13 @@ document.getElementById("add-row-form").addEventListener("submit", (event) => {
     // Check if any field is empty
     if (!cusId || !transactionId || !transactionDay || !numberProductCategory || !productQuantity || !totalPriceTransaction ) {
         alert("Thông tin không hợp lệ.");
+        return;
+    }
+
+    // Check if ID already exists in the table
+    const existingIds = Array.from(document.querySelectorAll(".table-sortable tbody tr td:first-child"), td => td.textContent.trim());
+    if (existingIds.includes(cusId)) {
+        alert("ID đã tồn tại. Thông tin không hợp lệ.");
         return;
     }
 
