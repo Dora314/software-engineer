@@ -84,7 +84,7 @@ document.getElementById("add-row-form").addEventListener("submit", (event) => {
     event.preventDefault();
     
 
-    const id = document.getElementById("new-phoneNo").value;
+    const id = document.getElementById("new-transactionId").value;
     // Other fields...
 
     // Check if ID already exists in the table
@@ -93,27 +93,27 @@ document.getElementById("add-row-form").addEventListener("submit", (event) => {
         alert("ID đã tồn tại. Thông tin không hợp lệ.");
         return;
     }
-    const transactionID = document.getElementById("new-transactionID").value;
+    const transactionId = document.getElementById("new-transactionId").value;
     const transactionDay = document.getElementById("new-transactionDay").value;
     const totalPriceTransaction = document.getElementById("new-totalPriceTransaction").value;
     const numberProductCategory = document.getElementById("new-numberProductCategory").value;
+    const phoneNo = document.getElementById("new-phoneNo").value;
 
     // Check if any field is empty
-    if (!id || !transactionID || !transactionDay || !totalPriceTransaction || !numberProductCategory || !phoneNo) {
+    if (!transactionId || !transactionDay || !totalPriceTransaction || !numberProductCategory|| !phoneNo ) {
         alert("Thông tin không hợp lệ.");
         return;
     }
 
     const newRow = document.createElement('tr');
     newRow.innerHTML = `
-        <td class="editable">${transactionID}</td>
+        <td class="editable">${transactionId}</td>
         <td class="editable">${transactionDay}</td>
         <td class="editable">${totalPriceTransaction}</td>
         <td class="editable">${numberProductCategory}</td>
-        <td class="editable">${id}</td>
+        <td class="editable">${phoneNo}</td>
         <td>
-            <button class="edit-btn">Edit</button>
-            <button class="delete-btn">Delete</button>
+            <button class="delete-btn">Xoá</button>
         </td>
     `;
 
