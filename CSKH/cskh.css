@@ -2,7 +2,7 @@ body {
     font-family: Arial, sans-serif;
     background-image: url(); /* Thay thế bằng đường dẫn thực tế của file PNG */
   background-size: cover; /* Đảm bảo hình ảnh bao phủ toàn bộ khu vực */
-  background-color:#D0D0D0;
+  background-color:#ffff;
 }
 .center-heading {
   text-align: center;
