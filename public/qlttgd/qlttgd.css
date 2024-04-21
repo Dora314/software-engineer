@@ -13,7 +13,7 @@ body {
 
 .table-sortable {
     width: 80%;
-    border-collapse: collapse;
+    /* border-collapse: collapse; */
     margin-left: 300px;
     margin-top: 20px;
 }
