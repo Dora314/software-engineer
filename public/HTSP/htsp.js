@@ -58,6 +58,14 @@ document.querySelectorAll(".edit-btn").forEach(button => {
                 // If the cell is currently non-editable, make it editable and add the highlight
                 cell.contentEditable = true;
                 cell.style.backgroundColor = "#ffe0e0"; // Highlight editable cells
+
+                // Add an event listener for the blur event
+                cell.addEventListener("blur", () => {
+                    // Check if the cell is empty when it loses focus
+                    if (cell.textContent.trim() === "") {
+                        alert("Bạn chưa thêm đầy đủ thông tin.");
+                    }
+                });
             }
         });
     });
