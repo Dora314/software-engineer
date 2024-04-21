@@ -58,6 +58,14 @@ document.querySelectorAll(".edit-btn").forEach(button => {
                 // If the cell is currently non-editable, make it editable and add the highlight
                 cell.contentEditable = true;
                 cell.style.backgroundColor = "#ffe0e0"; // Highlight editable cells
+
+                // Add an event listener for the blur event
+                cell.addEventListener("blur", () => {
+                    // Check if the cell is empty when it loses focus
+                    if (cell.textContent.trim() === "") {
+                        alert("Bạn chưa thêm đầy đủ thông tin.");
+                    }
+                });
             }
         });
     });
@@ -124,6 +132,40 @@ document.getElementById("add-row-form").addEventListener("submit", (event) => {
             <button class="delete-btn">Delete</button>
         </td>
     `;
+    document.querySelectorAll(".edit-btn").forEach(button => {
+        button.addEventListener("click", () => {
+            const row = button.parentElement.parentElement;
+            const cells = row.querySelectorAll(".editable");
+            let allCellsFilled = true;
+            cells.forEach(cell => {
+                if (cell.isContentEditable) {
+                    // If the cell is currently editable, check if it's empty
+                    if (cell.textContent.trim() === "") {
+                        allCellsFilled = false;
+                    }
+    
+                    // Make it non-editable and remove the highlight
+                    cell.contentEditable = false;
+                    cell.style.backgroundColor = ""; // Remove background color
+                } else {
+                    // If the cell is currently non-editable, make it editable and add the highlight
+                    cell.contentEditable = true;
+                    cell.style.backgroundColor = "#ffe0e0"; // Highlight editable cells
+                }
+            });
+    
+            // If not all cells are filled, show an alert
+            if (!allCellsFilled) {
+                alert("Bạn chưa thêm đầy đủ thông tin.");
+            }
+        });
+    });
+    
+
+
+
+
+
 
     document.querySelector(".table-sortable tbody").appendChild(newRow);
 
