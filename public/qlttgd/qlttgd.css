@@ -119,6 +119,8 @@ body {
     cursor: pointer;
     font-size: 20px;
     font-weight: bold;
+    margin-left: 1450px; /* Thêm dòng này */
+    display: block;
 }
 /* Điều chỉnh cơ bản cho body */
 body {
@@ -312,4 +314,8 @@ ion-icon {
   line-height: 1.5px;
   vertical-align: middle; /* Cân đối chữ */
 
+}
+.ion-icon-larger {
+  font-size: 40px;
+  width: 70px;
 }
