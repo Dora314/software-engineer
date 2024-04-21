@@ -9,6 +9,9 @@
     function alertFeature() {
       alert('Tính năng đang được được phát triển');
     }
+    function alertFeature1() {
+      alert('Đăng xuất thành công!');
+    }
   </script>
 </head>
 <body>
@@ -38,7 +41,9 @@
     <li class="submenu"><a href="#"><ion-icon name="person-circle-outline"></ion-icon> Tài khoản</a>
       <ul>
         <li><a href="../Login/forgotpass.html"><ion-icon name="key-outline"></ion-icon> Đổi mật khẩu</a></li>
-        <li><a href="../Login/login.html"><ion-icon name="log-out-outline"></ion-icon> Đăng xuất</a></li>
+        <li><a href="#" onclick="alertFeature1(); location.href='../Login/login.html';"><ion-icon name="log-out-outline"></ion-icon> Đăng xuất </a></li>
+
+
       </ul>
     </li>
   </ul>

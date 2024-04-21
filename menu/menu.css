@@ -3,7 +3,7 @@ body {
   font-family: 'Helvetica Neue', Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-image: url(../menu/img/welcome.png); /* Thay thế bằng đường dẫn thực tế của file PNG */
+  background-image: url(../menu/img/welcome2.png); /* Thay thế bằng đường dẫn thực tế của file PNG */
   background-size: cover; /* Đảm bảo hình ảnh bao phủ toàn bộ khu vực */
 }
 
