@@ -216,3 +216,4 @@ document.getElementById("id-search").addEventListener("keyup", function() {
         row.style.display = idText.includes(searchValue) ? "" : "none";
     });
 });
+
