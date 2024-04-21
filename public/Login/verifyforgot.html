@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Xác thực - Đổi mật khẩu</title>
-    <link rel="stylesheet" href="verifyforgot.css">
+    <link rel="stylesheet" href="./verifyforgot.css">
 </head>
 <body>
     <div class="container">
@@ -30,7 +30,7 @@
                 <label for="phone">Số điện thoại:</label>
                 <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" class = "form-phoneno" required placeholder="Nhập đúng số điện thoại để xác thực">
             </div>
-            <button type="button" onclick="location.href='forgotpass.html'">Xác nhận</button>
+            <button type="button" onclick="validateForm()">Xác nhận</button>
         </form>
     </div>
 
@@ -41,6 +41,22 @@
         </div>
     </div>
 
-    <script src="verifyforgot.js"></script>
+    <script>
+        function validateForm() {
+            var username = document.getElementById("username").value;
+            var role = document.getElementById("role").value;
+            var phone = document.getElementById("phone").value;
+
+            if (username === "" || role === "" || phone === "") {
+                alert("Hãy nhập đầy đủ thông tin!");
+                window.location.href = '../Login/login.html';
+            }
+            else {
+                alert("Xác thực thành công!");
+                window.location.href = '../Login/forgotpass.html';
+            }
+            return true;
+        }
+    </script>
 </body>
 </html>
