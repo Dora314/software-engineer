@@ -112,8 +112,8 @@ document.getElementById("add-row-form").addEventListener("submit", (event) => {
     <td class="editable">${productQuantity}</td>
     <td class="editable">${totalPriceTransaction}</td>
     <td class="action-buttons">
-        <button class="edit-btn">Sửa</button>
-        <button class="delete-btn">Xóa</button>
+        <button class="edit-btn"><ion-icon name="create-outline"></ion-icon></button>
+        <button class="delete-btn"><ion-icon name="trash-outline"></ion-icon></button>
     </td>
     `;
 
