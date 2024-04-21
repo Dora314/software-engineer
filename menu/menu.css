@@ -14,7 +14,7 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  background: linear-gradient(to bottom, #f7f9fa, #f7f7f7);
+  background-color: #EDEDED;
   box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
   padding-top: 20px;
 }
@@ -43,7 +43,7 @@ body {
 }
 
 .main-menu li a:hover {
-  background-color: #0fcce6;
+  background-color: #CA9BF7;
 }
 
 /* Submenu sổ xuống */
@@ -58,7 +58,7 @@ body {
   top: 100%; /* Bắt đầu từ dưới cùng của item menu */
   left: 0;
   width: 100%; /* Chiều rộng bằng với menu cha */
-  background-color: #0969f8;
+  background-color: #ffffff;
   list-style-type: none; /* Loại bỏ bullet */
   padding: 0; /* Loại bỏ padding mặc định */
   transition: all 0.3s ease;
@@ -78,11 +78,11 @@ body {
 /* Submenu link */
 .submenu ul li a {
   padding: 15px 25px;
-  color: #fff;
+  color: #000000;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   display: block; /* Đảm bảo liên kết chiếm toàn bộ chiều rộng */
 }
 
 .submenu ul li a:hover {
-  background-color: #004080;
+  background-color: #ffffff;
 }
