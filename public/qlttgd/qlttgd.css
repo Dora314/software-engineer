@@ -36,7 +36,6 @@ body {
 
 /* Button styles */
 .action-buttons {
-    display: flex;
     justify-content: center;
     align-items: center;
 }
