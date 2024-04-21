@@ -163,7 +163,7 @@ body {
   color: #000000;
   transition: background-color 0.3s ease;
   line-height: 1.5px;
-  vertical-align: middle;
+  ;
 }
 
 .main-menu li a:hover {
@@ -260,7 +260,6 @@ body {
   color: #000000;
   transition: background-color 0.3s ease;
   line-height: 1.5px;
-  vertical-align: middle;
 }
 
 .main-menu li a:hover {
