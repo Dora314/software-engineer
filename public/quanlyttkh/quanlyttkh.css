@@ -2,7 +2,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #ffff;
+    background-color: #ffffff;
 }
 
 .container {
@@ -163,7 +163,6 @@ body {
   color: #000000;
   transition: background-color 0.3s ease;
   line-height: 1.5px;
-  vertical-align: middle;
 }
 
 .main-menu li a:hover {
