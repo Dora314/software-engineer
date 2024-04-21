@@ -101,10 +101,6 @@ document.getElementById("add-row-form").addEventListener("submit", (event) => {
 
     // Check if ID already exists in the table
     const existingIds = Array.from(document.querySelectorAll(".table-sortable tbody tr td:first-child"), td => td.textContent.trim());
-    if (existingIds.includes(cusId)) {
-        alert("ID đã tồn tại. Thông tin không hợp lệ.");
-        return;
-    }
 
     // Create a new table row
     const newRow = document.createElement('tr');
