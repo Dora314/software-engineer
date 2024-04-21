@@ -1,14 +1,68 @@
 <!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="menu.css">
+  <script>
+    function alertFeature() {
+      alert('Tính năng đang được được phát triển');
+    }
+    function alertFeature1() {
+      alert('Đăng xuất thành công!');
+    }
+  </script>
+</head>
+<body>
+
+<div class="sidebar">
+  <h2>Ứng dụng CRM TMĐT</h2>
+  <ul class="main-menu">
+    <li><a href="../menu/menu.html">
+      <span class ="icon"><ion-icon name="home-outline">
+      </ion-icon></span> Trang chủ</a></li>
+    <li><a href="../quanlyttkh/quanlyttkh.html">
+      <ion-icon name="people-outline"></ion-icon> Quản lý thông tin khách hàng</a></li>
+    <li class="submenu"><a href="#" onclick="alertFeature()"><ion-icon name="man-outline"></ion-icon> Khách hàng tiềm năng</a>
+    </li>
+    <li class="submenu"><a href="#"><ion-icon name="server-outline"></ion-icon> Quản lý thông tin giao dịch</a>
+      <ul>
+        <li><a href="../qlttgd/qlttgd.html"><ion-icon name="receipt-outline"></ion-icon> Lưu thông tin giao dịch</a></li>
+        <li><a href="#" onclick="alertFeature()"><ion-icon name="stats-chart-outline"></ion-icon> Theo dõi tổng doanh số</a></li>
+      </ul>
+    </li>
+    <li><a href="#" onclick="alertFeature()"><ion-icon name="earth-outline"></ion-icon> Tiếp thị </a></li>
+    <li><a href="../CSKH/cskh.html"><ion-icon name="mail-unread-outline"></ion-icon> Chăm sóc khách hàng</a></li>
+    <li class="submenu"><a href="#"><ion-icon name="person-circle-outline"></ion-icon> Tài khoản</a>
+      <ul>
+        <li><a href="../Login/forgotpass.html"><ion-icon name="key-outline"></ion-icon> Đổi mật khẩu</a></li>
+        <li><a href="#" onclick="alertFeature1(); location.href='../Login/login.html';"><ion-icon name="log-out-outline"></ion-icon> Đăng xuất </a></li>
+
+
+      </ul>
+    </li>
+  </ul>
+</div>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+</body>
+</html>
+
+
+
+
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Nhập đơn hàng</title>
+	<title>Thông tin đơn hàng</title>
 	<link rel="stylesheet" href="qldh.css">
 </head>
 <body>
-  <h1 class = "heading">Nhập đơn hàng </h1>
+  <h1 class = "heading">Thông tin đơn hàng </h1>
   <h2 class="subheading">Để tạo mới thông tin đơn hàng, vui lòng điền vào các trường dưới đây:</h2>
   <form id="add-row-form">
     <div class="input-row">
@@ -20,6 +74,9 @@
         <input type="text" id="new-productQuantity" placeholder="productQuantity">
         <input type="text" id="totalPriceTransaction" placeholder="totalPriceTransaction">
         <button type="submit">Thêm</button>
+      <button type="button" style="display: block; margin-top: 20px;" onclick="location.href='../HTSP/htsp.html'">
+        <ion-icon name="add-outline"></ion-icon> Chuyển tiếp
+      </button>
 
       </div>
     </div>

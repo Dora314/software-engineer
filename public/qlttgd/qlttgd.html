@@ -66,16 +66,21 @@
   <h2 class="subheading">Để tạo mới thông tin giao dịch, vui lòng điền vào các trường dưới đây:</h2>
 
   <form id="add-row-form">
-    <div class="input-row">
-      <div class="input-column">
-        <input type="text" id="new-transactionId" placeholder="ID Giao dịch">
-        <input type="text" id="new-transactionDay" placeholder="Ngày giờ giao dịch">
-        <input type="text" id="new-totalPriceTransaction" placeholder="Tổng giá trị giao dịch">
-        <input type="text" id="new-numberProductCategory" placeholder="Số lượng mặt hàng">
-        <input type="text" id="new-phoneNo" placeholder="Số điện thoại">
-        <button type="submit"><ion-icon name="person-add-outline"></ion-icon></button>
-      </div>
-    </div>
+    <div class="input-column">
+      <input type="text" id="new-transactionId" placeholder="ID Giao dịch">
+      <input type="text" id="new-transactionDay" placeholder="Ngày giờ giao dịch">
+      <input type="text" id="new-totalPriceTransaction" placeholder="Tổng giá trị giao dịch">
+      <input type="text" id="new-numberProductCategory" placeholder="Số lượng mặt hàng">
+      <input type="text" id="new-phoneNo" placeholder="Số điện thoại">
+      <button type="submit" style="display: block;"><ion-icon name="person-add-outline"></ion-icon></button>
+      <button type="button" style="display: block; margin-top: 20px;" onclick="location.href='../QLDH/qldh.html'">
+        <ion-icon name="add-outline"></ion-icon> Chuyển tiếp
+      </button>
+      
+
+  </div>
+  
+  
   </form>
 
   <form id="add-row-form3">
@@ -116,3 +121,4 @@
 	<script src="qlttgd.js"></script>
 </body>
 </html>
+
