@@ -21,8 +21,8 @@
           <input type="password" id="confirm-password" name="confirm-password" class = "form-input" required placeholder ="Nhập lại mật khẩu mới">
         </div>
         <div class="button-group">
-          <button type="button" onclick="cancelReset(); location.href='../menu/menu.html';" class="login-forgotpass">Hủy</button>
-          <button type="button" onclick="location.href='login.html'" class="confirm-button">Xác nhận</button>
+          <button type="button" onclick="cancelReset()" class="login-forgotpass">Hủy</button>
+          <button type="button" onclick="location.href='../Login/login.html'" class="confirm-button">Xác nhận</button>
         </div>
       </form>
     </div>
@@ -33,6 +33,15 @@
       // Điều chỉnh hành động khi nhấn nút Hủy ở đây
       alert("Đã hủy thao tác đổi mật khẩu");
       window.location.href = '../Login/login.html';
+    }
+    function validateForm() {
+            var username = document.getElementById("username").value;
+            var role = document.getElementById("role").value;
+            var phone = document.getElementById("phone").value;
+
+            if (username === "" || role === "" || phone === "") {
+                alert("Hãy nhập đầy đủ thông tin!");
+            }
     }
   </script>
 </body>
