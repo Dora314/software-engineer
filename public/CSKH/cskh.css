@@ -1,13 +1,14 @@
 body {
     font-family: Arial, sans-serif;
     background-image: url(); /* Thay thế bằng đường dẫn thực tế của file PNG */
-  background-size: cover; /* Đảm bảo hình ảnh bao phủ toàn bộ khu vực */
-  background-color:#ffff;
+    background-size: cover; /* Đảm bảo hình ảnh bao phủ toàn bộ khu vực */
+    background-color:#ffff;
 }
 .center-heading {
   text-align: center;
 }
 h1 {
+  margin-top: 70px;
     margin-left:820px ;
     color: rgb(10, 76, 218);
 }
@@ -15,7 +16,7 @@ h1 {
 table {
     margin-left:350px ;
     width: 75%;
-    border-collapse: collapse;
+    /* border-collapse: collapse; */
     margin-top: 20px;
     font-size:20px ;
 }
@@ -27,11 +28,12 @@ th, td {
 }
 
 th {
-    background-color: #f4f4f4;
+    background-color:#88ABF2;
+    color:#000000;
 }
 
 tr:nth-child(even) {
-    background-color: #f2f2f2;
+    background-color: #eae9e9;
 }
 
 tr:hover {
@@ -97,7 +99,6 @@ body {
   color: #000000;
   transition: background-color 0.3s ease;
   line-height: 1.5px;
-  vertical-align: middle;
 }
 
 .main-menu li a:hover {
