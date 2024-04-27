@@ -1,17 +1,19 @@
 {
   "name": "crm-project---software-engineer",
   "version": "1.0.0",
-  "type": "module",
-  "main": "index.js",
+  "description": "",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start" : "nodemon server/server.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "",
   "dependencies": {
-    "express": "^4.19.2",
-    "mysql2": "^3.9.6"
+    "body-parser": "^1.20.2",
+    "express.js": "^1.0.0",
+    "knex": "^3.1.0",
+    "mysql": "^2.18.1",
+    "nodemon": "^3.1.0"
   }
 }
