@@ -1,0 +1,130 @@
+
+CREATE TABLE dataLogin (
+  _username varchar(255) NOT NULL,
+  _password varchar(255) NOT NULL CHECK ((length(_password) between 8 and 32)),
+  _name varchar(255) NOT NULL,
+  _bday date NOT NULL,
+  _gender varchar(255) NOT NULL CHECK ((_gender IN ('Male','Female','Other'))),
+  _role varchar(255) NOT NULL CHECK ((_role IN ('Quản lý','Marketing','Sale','Tư vấn'))),
+  _adminPhone varchar(255) NOT NULL,
+  PRIMARY KEY (_username)
+);
+-- DROP TABLE dataLogin;
+
+CREATE TABLE dataKhachHang (
+  _cusID int NOT NULL AUTO_INCREMENT,
+  _cusName varchar(255) NOT NULL,
+  _birthdate date NOT NULL,
+  _address varchar(255) NOT NULL,
+  _phoneNo varchar(10) NOT NULL,
+  _email varchar(64) NOT NULL,
+  _level int NOT NULL,
+  _occupation varchar(255) NOT NULL,
+  _numberTransaction int NOT NULL,
+  _totalPriceTransaction float NOT NULL,
+  PRIMARY KEY (_cusID)
+); 
+DROP TABLE dataKhachHang
+
+CREATE TABLE dataYeuCau (
+    _requestID   varchar(10) NOT NULL,
+    _requestType varchar(10) NOT NULL,
+    _description varchar(1000) NOT NULL, 
+    _cusID int, 
+	FOREIGN KEY (_cusID) REFERENCES dataKhachHang(_cusID),
+    PRIMARY KEY (_requestID)
+);
+-- DROP TABLE dataYeuCau
+
+CREATE TABLE dataPhanHoi (
+    _replyID   varchar(10) NOT NULL,
+    _replyRequest varchar(1000) NOT NULL, 	
+    _requestID varchar(10), 
+	FOREIGN KEY (_requestID) REFERENCES dataYeuCau(_requestID),
+    PRIMARY KEY (_replyID)
+);
+-- DROP TABLE dataPhanHoi
+
+CREATE TABLE dataThongTinGiaoDich (
+    _transactionID varchar (10) NOT NULL,
+    _transactionDay date NOT NULL,
+    _totalPriceTransaction float NOT NULL, 
+	_numberProductCategory int NOT NULL,
+    
+    _cusID int, 
+	FOREIGN KEY (_cusID) REFERENCES dataKhachHang(_cusID),
+    PRIMARY KEY (_transactionID)
+);
+-- DROP TABLE dataThongTinGiaoDich
+
+CREATE TABLE dataDonHang (
+    _orderLineID int NOT NULL AUTO_INCREMENT,
+    _productQuantity int NOT NULL,
+	
+    _transactionID varchar(10),
+    _productID varchar (10),
+    
+	FOREIGN KEY (_transactionID) REFERENCES dataThongTinGiaoDich(_transactionID),
+	FOREIGN KEY (_productID) REFERENCES dataSanPham(_productID),
+    PRIMARY KEY (_orderLineID)
+);
+-- DROP TABLE dataDonHang
+
+CREATE TABLE dataSanPham (
+    _productID varchar (10) NOT NULL,
+    _productCategory varchar (128) NOT NULL,
+    _productName varchar (128) NOT NULL,
+    _price float NOT NULL,
+    PRIMARY KEY (_productID)
+);
+-- DROP TABLE dataSanPham
+
+
+
+
+  INSERT INTO crm.dataYeuCau  (_requestID,_requestType ,_description ,_cusID) VALUES
+(1 ,'913722860', 'Complaint', 'Issue with product delivery', 'Waiting'),
+(2 ,'910229999', 'Inquiry',	'Product information needed', 'In Process'),
+(3 ,'910336777', 'Feedback', 'Suggestion for improvement', 'Responded');
+
+INSERT INTO crm.dataKhachHang  (__cusID ,_cusName,_birthdate ,_address ,_phoneNo ,_email,_occupation ,_numberTransaction ,_totalPriceTransaction) VALUES
+(001, 'Nam David', '10/10/2004', 'Vietnam', '0123456789','haha@gmail.com','Student', 'VIP',99999),
+(002, 'Thach Dylan', '10/10/2004', 'Vietnam', '0123456789','haha@gmail.com','Student', 'VIP',99999),
+(004 ,'Dung Windz', '10/10/2004', 'Vietnam', '0123456789','haha@gmail.com','Student', 'VIP',99999),
+(005, 'Bao Harry', '10/10/2004', 'Vietnam', '0123456789','haha@gmail.com','Student', 'VIP',99999),
+(006, 'Len', '10/10/2004', 'Vietnam', '0123456789','haha@gmail.com','Student', 'VIP',99999);
+
+INSERT INTO crm.dataLogin (_username, _password, _name, _bday, _gender, _role, _adminPhone) VALUES
+  ('USER001', 'STRONG_PASSWORD', 'Nam David', '1980-01-01', 'Male', 'Quản lý', '0548889999'),
+  ('USER002', 'STRONG_PASSWORD', 'Bao Harry', '1995-07-14', 'Male', 'Sale', '0548888888'),
+  ('USER003', 'STRONG_PASSWORD', 'Thach Dylan', '2000-12-25', 'Male', 'Tư vấn', '0548887777'),
+  ('USER004', 'STRONG_PASSWORD', 'Dung Windd', '1972-03-12', 'Male', 'Quản lý', '0548886666'),
+  ('USER005', 'STRONG_PASSWORD', 'Duy Dora', '1965-11-21', 'Male', 'Marketing', '0548885555'),
+  ('USER006', 'STRONG_PASSWORD', 'Hieu Len', '2003-05-08', 'Female', 'Sale', '0548884444'),
+  ('USER007', 'STRONG_PASSWORD', 'Hai Mee', '1990-09-27', 'Female', 'Tư vấn', '0548883333'),
+  ('USER008', 'STRONG_PASSWORD', 'Trang Kook', '1985-02-04', 'Female', 'Quản lý', '0548882222'),
+  ('USER009', 'STRONG_PASSWORD', 'Viet New Ng', '1978-08-15', 'Male', 'Marketing', '0548881111'),
+  ('USER010', 'STRONG_PASSWORD', 'Truc Bamboo', '2002-06-23', 'Male', 'Sale', '0548880000');
+
+-- UPDATE crm.dataLogin
+-- SET _gender = REPLACE(_gender, 'male', 'Male')
+
+INSERT INTO crm.dataSanPham  (_productID, _productCategory, _productName, _price) VALUES
+  ('LAPTOP001', 'laptop', 'High Performance Gaming Laptop', 1299.99),
+  ('LAPTOP002', 'laptop', 'Ultra Thin Productivity Laptop', 899.99),
+  ('SMARTPH001', 'smartphone', 'Flagship Smartphone with Pro Camera', 749.99),
+  ('SMARTPH002', 'smartphone', 'Iphone  Smartphone with Great Battery Life', 1500.99),
+  ('EARBUDS001', 'earbuds', 'Wireless Noise-Cancelling Earbuds', 199.99),
+  ('EARBUDS002', 'earbuds', 'True Wireless Earbuds with Long Playtime', 79.99),
+  ('ACCESS001', 'accessories', 'Phone Case - Impact Resistant', 29.99),
+  ('ACCESS002', 'accessories', 'Wireless Charging Pad', 34.99),
+  ('PCHW001', 'pc hardware', 'High-Performance Graphics Card', 499.99),
+  ('PCHW002', 'pc hardware', 'Core I9 Intel Gen 15', 899.99),
+  ('SMARTWCH01', 'smartwatch', 'Fitness Tracker Smartwatch', 149.99),
+  ('SMARTWCH02', 'smartwatch', 'Smartwatch with Calling and Messaging', 299.99),
+  ('TABLET001', 'tab', 'Android Tablet for Entertainment', 249.99),
+  ('TABLET002', 'tab', 'Windows Tablet for Productivity', 399.99),
+  ('LAPTOP003', 'laptop', 'Chromebook for Students and Everyday Use', 499.99),
+  ('SMARTPH003', 'smartphone', 'Budget-Friendly Smartphone with Great Value', 199.99),
+  ('EARBUDS003', 'earbuds', 'Wireless Earbuds with Excellent Sound Quality', 24.99),
+  ('ACCESS003', 'accessories', 'Screen Protector - Tempered Glass', 14.99);
